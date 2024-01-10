@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Evaluator.h"
+#include "CGeneticAlgorithm.h"
 
 #include <random>
 #include <vector>
@@ -10,10 +11,11 @@ using namespace std;
 class COptimizer
 {
 public:
-	COptimizer(CLFLnetEvaluator &cEvaluator);
+	COptimizer(CLFLnetEvaluator& cEvaluator);
 
 	void vInitialize();
 	void vRunIteration();
+
 
 	vector<int> *pvGetCurrentBest() { return &v_current_best; }
 
@@ -21,6 +23,7 @@ private:
 	void v_fill_randomly(vector<int> &vSolution);
 
 	CLFLnetEvaluator &c_evaluator;
+	CGeneticAlgorithm c_genetic_algorithm;
 
 	double d_current_best_fitness;
 	vector<int> v_current_best;

@@ -4,6 +4,7 @@
 
 using namespace std;
 
+	CGeneticAlgorithm::CGeneticAlgorithm() {};
 
 	CGeneticAlgorithm::CGeneticAlgorithm(int popSize, double crossProb, double mutProb, int requestQuantity, int pathsQuantity, int stopCriterion) {
 
@@ -18,7 +19,7 @@ using namespace std;
 	}
 
 
-
+	// TODO deallocating memory
 	CGeneticAlgorithm::~CGeneticAlgorithm() {};
 
 	void CGeneticAlgorithm::vInitialize() {
@@ -36,5 +37,27 @@ using namespace std;
 		}
 			
 	}
+
+	void runGeneticAlgorithm(int max_iterations) {
+		int iterator = 0;
+
+		while (iterator < max_iterations) {
+			// Tutaj dodaj implementację kolejnych kroków algorytmu genetycznego:
+			// - Ewaluacja osobników
+			// - Selekcja
+			// - Krzyżowanie
+			// - Mutacja
+			// - Aktualizacja najlepszego rozwiązania
+			// - Sprawdzenie kryterium stopu
+
+			iterator++;
+		}
+	}
+	//TODO how to check and return bestResult
+	CIndividual* CGeneticAlgorithm::bestResult() const {
+		return bestRes;
+	}
+
+	
 
 

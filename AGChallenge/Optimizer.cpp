@@ -1,4 +1,5 @@
-#include "Optimizer.h"
+﻿#include "Optimizer.h"
+#include "CGeneticAlgorithm.h"
 
 #include <cfloat>
 #include <iostream>
@@ -8,12 +9,20 @@ using namespace std;
 
 COptimizer::COptimizer(CLFLnetEvaluator &cEvaluator)
 	: c_evaluator(cEvaluator)
+
+	
 {
 	random_device c_seed_generator;
 	c_rand_engine.seed(c_seed_generator());
 
 	d_current_best_fitness = 0;
-}//COptimizer::COptimizer(CEvaluator &cEvaluator)
+}
+
+
+
+
+
+//COptimizer::COptimizer(CEvaluator &cEvaluator)
 
 void COptimizer::vInitialize()
 {
@@ -22,7 +31,23 @@ void COptimizer::vInitialize()
 }//void COptimizer::vInitialize()
 
 void COptimizer::vRunIteration()
+
 {
+
+	/*while ¬stopCondition do
+	 newP op empty;
+	while size(newP op) < size(population) do
+	par1 ← selectIndividual(population);
+	par2 ← selectIndividual(population);
+	7: of f spr1, of f spr2 ← crossover(par1, par2);
+	8: Mutate(of f spr1);
+	9: Mutate(of f spr2);
+	10: InsertToPopulation(newP op, of f spr1);
+	11: InsertToPopulation(newP op, of f spr2);
+	12: end while
+		13 : population ← newP op;
+	14: end while*/
+
 	vector<int> v_candidate;
 	v_fill_randomly(v_candidate);
 

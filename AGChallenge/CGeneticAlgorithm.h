@@ -13,14 +13,18 @@ private:
 	int requestQuantity; // ilosc żądań
 	int pathsQuantity; // np. 0-3 dostepne sciezki 
 	vector<CIndividual*>* vectorPopulation;
+	CIndividual* bestRes;
 
 	
 
 public:
+	CGeneticAlgorithm();
 	CGeneticAlgorithm(int popSize, double crossProb, double mutProb, int requestQuantity, int pathsQuantity, int stopCriterion);
 	~CGeneticAlgorithm();
 	void vInitialize();
 	void printPopulation();
+	void runGeneticAlgorithm(int max_iterations);
+	CIndividual* bestResult() const;
 
 
 };

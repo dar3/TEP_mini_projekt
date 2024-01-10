@@ -59,11 +59,15 @@ void  vRunLFLExperiment(CString  sNetName)
 
 void main(int iArgCount, char **ppcArgValues)
 {
+
+	/*
 	srand(time(NULL));
 	
 	CGeneticAlgorithm cGeneticAlgorithmObject(POPULATION_SIZE, CROSS_PROBABILITY, MUTATION_PROBABILITY, REQUEST_QUANTITY, PATHS_QUANTITY, STOP_CRITERION);
 	cGeneticAlgorithmObject.vInitialize();
 	cGeneticAlgorithmObject.printPopulation();
+	
+	*/
 
 	//CIndividual obj1;
 	
@@ -73,7 +77,7 @@ void main(int iArgCount, char **ppcArgValues)
 	
 */
 
-	/*
+	
 	random_device c_mask_seed_generator;
 	int i_mask_seed = (int)c_mask_seed_generator();
 
@@ -81,7 +85,7 @@ void main(int iArgCount, char **ppcArgValues)
 	CString  s_test = "104b00";
 	vRunLFLExperiment(s_test);
 
-	*/
+	
 
 	/*vRunIsingSpinGlassExperiment(81, 0, i_mask_seed);
 	vRunIsingSpinGlassExperiment(81, 0, iSEED_NO_MASK);
